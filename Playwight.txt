@@ -1,0 +1,15 @@
+What is NPM -> Node package manager
+
+Typescript -> features
+External Libraries -> Playwright, ts-node
+Libraries -> 
+Packaged Code -> Class, Interfaces, functions
+
+Playwright -> end to end test framework 
+
+tests - We create tests in tests folder
+package.json - It contains project details like project name, version, author, dependencies
+Playwright.config.ts - Its playwright config file -> where we can set playwright settings
+
+1. Initialise typescript project - npm init playwright@latest
+ - download playwright, creating a pw project
