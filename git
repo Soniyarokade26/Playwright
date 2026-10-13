@@ -1,0 +1,31 @@
+
+import { Page, expect, Locator } from "@playwright/test";
+
+export class ABC {
+
+    page: Page;
+    welcomeheader: Locator;
+    portfolioValue: Locator;
+    investedAmount: Locator;
+    fundExplorerTab: Locator;
+
+    constructor(page: Page) {
+        this.page = page;
+
+        this.welcomeheader = page.getByRole('heading', {
+            name: 'Welcome Back, Soniya'
+        });
+
+        this.portfolioValue = page
+            .getByTestId('portfolio-value-card')
+            .getByText('Portfolio Value');
+
+        this.investedAmount = page
+            .getByTestId('invested-amount-card')
+            .locator('[class="card-value"]');
+
+        this.fundExplorerTab = page.getByRole('link', {
+            name: 'Fund Explorer'
+        });
+    }
+}
